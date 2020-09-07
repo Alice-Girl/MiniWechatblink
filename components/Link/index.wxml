@@ -1,0 +1,5 @@
+<!--components/Link/index.wxml-->
+<view class="link-containers" bindtap="onLink">
+  <image class="link-img" src="{{link ? yesSrc: noSrc}}" alt="logo"/>
+  <text class="link-title">{{fav_nums}}</text>
+</view>

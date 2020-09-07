@@ -1,0 +1,20 @@
+.link-containers {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10rpx;
+  width: 90rpx;
+}
+
+.link-img {
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.link-title {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #bbbbbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+}
