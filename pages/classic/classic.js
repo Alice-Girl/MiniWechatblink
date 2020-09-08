@@ -8,7 +8,9 @@ Page({
    */
   data: {
     likeCount: 0,
-    likeStatus: true
+    likeStatus: true,
+    likeImg: '',
+    likeContent: ''
   },
 
   /**
@@ -18,9 +20,12 @@ Page({
     httpClassic.httpRequest({
       url: 'classic/latest',
       success: (res) => {
+        console.log(res)
         this.setData({
           likeCount: res.fav_nums,
-          likeStatus: res.like_status
+          likeStatus: res.like_status,
+          likeImg: res.image,
+          likeContent: res.content
         })
       }
     })
