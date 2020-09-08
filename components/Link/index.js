@@ -4,15 +4,22 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    link: {
+      type: Boolean,
+      value: false
+    },
+    fav_nums: {
+      type: Number,
+      value: 0
+    }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    fav_nums: 100,
-    link: false,
+    // link: true,
+    // fav_nums: 0,
     yesSrc: "./images/like.png",
     noSrc: "./images/like@dis.png"
   },
@@ -22,9 +29,11 @@ Component({
    */
   methods: {
     onLink() {
+      let link = this.properties.link
+      let fav_nums = this.properties.fav_nums
       this.setData({
-        fav_nums: this.data.link ? this.data.fav_nums - 1 : this.data.fav_nums + 1,
-        link: !this.data.link
+        fav_nums: link ? fav_nums - 1 : fav_nums + 1,
+        link: !link
       })
     }
   }

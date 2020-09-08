@@ -1,4 +1,4 @@
 <!--pages/classic/classic.wxml-->
 <view>
-  <v-link/>
+  <v-link fav_nums="{{likeCount}}" link="{{likeStatus}}"/>
 </view>

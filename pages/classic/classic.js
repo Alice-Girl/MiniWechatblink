@@ -1,18 +1,29 @@
-// pages/classic/classic.js
+const Http = require('../../utils/http.js');
+const httpClassic = new Http();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    likeCount: 0,
+    likeStatus: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    httpClassic.httpRequest({
+      url: 'classic/latest',
+      success: (res) => {
+        this.setData({
+          likeCount: res.fav_nums,
+          likeStatus: res.like_status
+        })
+      }
+    })
   },
 
   /**
